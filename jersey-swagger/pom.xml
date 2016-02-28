@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kt.jersey</groupId>
+	<artifactId>jersey-swagger</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>jersey-swagger Maven Webapp</name>
+	<description>JERSEY &amp; Swagger integration</description>
+
+	<properties>
+		<jersey.version>2.2</jersey.version>
+		<jax.ws.rs.version>2.0.1</jax.ws.rs.version>
+		<spring.version>4.1.4.RELEASE</spring.version>
+		<swagger.version>1.5.7</swagger.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+       <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${jax.ws.rs.version}</version>
+		</dependency>
+
+		<!-- Swagger dependencies -->
+		<dependency>
+			<groupId>com.wordnik</groupId>
+			<artifactId>swagger-jersey2-jaxrs_2.10</artifactId>
+			<version>1.3.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.wordnik</groupId>
+			<artifactId>swagger-core_2.10</artifactId>
+			<version>1.3.13</version>
+		</dependency>
+
+		<!-- swagger version must be update -->
+		<!--dependency> <groupId>org.webjars</groupId> <artifactId>swagger-ui</artifactId> 
+			<version>2.0.12</version> </dependency -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>jersey-swagger</finalName>
+	</build>
+</project>
